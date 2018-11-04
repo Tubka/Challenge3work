@@ -99,12 +99,13 @@ header>button {
   margin: 50px 0;
   height: 50px;
   width: 160px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   border: none;
   border-radius: 25px;
   background-color: #7cc576;
   color: #fff;
+  text-transform: uppercase;
 }
 
 @media (min-width: 480px) {
@@ -229,11 +230,11 @@ header>button {
 .relax button {
   display: block;
   margin: 30px auto 0 10px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   width: 160px;
-  height: 46px;
+  height: 50px;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -300,6 +301,10 @@ header>button {
   font-weight: bold;
   text-decoration: none;
   color: #7cc576;
+}
+
+.project a:hover {
+  color: #000;
 }
 
 .project a>.fa-arrow-right {
@@ -412,13 +417,189 @@ cite::before {
   padding: 24px 0;
 }
 
+.yourProject h1 {
+  margin: 0 35px;
+}
+
 .yourProject button {
   font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px 20px;
   margin-top: 20px;
   text-transform: uppercase;
+  font-weight: bold;
   border: 2px solid white;
   border-radius: 8px;
   color: #fff;
   background-color: transparent;
+}
+
+.yourProject button:hover {
+  background-color: #fff;
+  color: #7cc576;
+}
+
+/* TECHNOLOGY */
+
+.technology {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.technology img {
+  margin: 14px 10px;
+}
+
+/* INFO */
+
+.info {
+  color: #fff;
+  background-color: #222;
+}
+
+.info section {
+  padding: 20px 0 10px 14px;
+}
+
+.info h1 {
+  text-transform: uppercase;
+}
+
+.info ul {
+  font-family: 'Roboto Slab', serif;
+  list-style-type: none;
+}
+
+.info ul li {
+  line-height: 24px;
+  padding: 10px 10px 10px 36px;
+  /* margin-top: 10px; */
+}
+
+.toronto::after,
+.toronto::before {
+  content: '\A';
+  white-space: pre-wrap;
+}
+
+.contact ul li:nth-child(1) {
+  background-image: url("img/location.png");
+  background-repeat: no-repeat;
+  background-position: 0 15px;
+}
+
+.contact ul li:nth-child(2) {
+  background-image: url("img/iconphone.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.contact ul li:nth-child(3) {
+  background-image: url("img/e-mail.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.posts ul li:nth-child(1) {
+  background-image: url("img/post.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.posts ul li:nth-child(2) {
+  background-image: url("img/photo.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.posts ul li:nth-child(3) {
+  background-image: url("img/post.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.posts ul li:nth-child(4) {
+  background-image: url("img/post.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.posts ul li:nth-child(5) {
+  background-image: url("img/media.png");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+.tweets span::after {
+  content: '\A';
+  white-space: pre-wrap;
+}
+
+.tweets ul li:nth-child(1) {
+  background-image: url("img/twitter.png");
+  background-repeat: no-repeat;
+  background-position: 0 15px;
+}
+
+.tweets ul li:nth-child(2) {
+  background-image: url("img/twitter.png");
+  background-repeat: no-repeat;
+  background-position: 0 15px;
+}
+
+.footer p {
+  text-align: center;
+  margin: 5px 20px;
+}
+
+.footer ul {
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+.footer ul li:nth-child(1) {
+  background-image: url("img/footertwitter.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(1):hover {
+  background-image: url("img/footertwitterhover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(2) {
+  background-image: url("img/footerfacebook.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(3) {
+  background-image: url("img/footerprinterest.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(3):hover {
+  background-image: url("img/footerprinteresthover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(4) {
+  background-image: url("img/footergoogle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer ul li:nth-child(4):hover {
+  background-image: url("img/footergooglehover.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
