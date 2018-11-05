@@ -34,8 +34,9 @@ div.logo {
 div.logo h1 {
   display: inline-block;
   font-size: 16px;
-  color: #555;
   font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
 }
 
 div.logo img {
@@ -182,6 +183,7 @@ div.logo button {
 /* padding h1 TITTLE */
 
 .tittle {
+  text-transform: uppercase;
   text-align: center;
   padding: 30px 10px 0 10px;
 }
@@ -365,9 +367,8 @@ div.logo button {
 }
 
 .culture p {
+  text-align: center;
   margin-top: 5px;
-  color: #777;
-  /* width: 60%; */
 }
 
 .pictureContainer {
@@ -379,7 +380,11 @@ div.logo button {
   margin: 0 10px 26px;
 }
 
-.clients .portrait_richardson {
+.clients .tittle+p {
+  text-align: center;
+}
+
+.clients .clients .portrait_richardson {
   float: left;
   height: 100px;
   width: 100px;
@@ -484,7 +489,8 @@ cite::before {
 /* TECHNOLOGY */
 
 .technology {
-  padding: 20px 0;
+  width: 200px;
+  margin: 20px auto;
   text-align: center;
 }
 
