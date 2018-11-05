@@ -18,7 +18,7 @@ html {
   clear: both;
 }
 
-nav div.logo {
+div.logo {
   position: fixed;
   width: 100%;
   height: var(--heightNavbar);
@@ -27,38 +27,68 @@ nav div.logo {
   left: 0;
   text-align: center;
   background-color: white;
-  box-shadow: 0px 1px 10px black;
-  z-index: 1;
+  /* box-shadow: 0px 1px 10px black; */
+  z-index: 2;
 }
 
-nav>div>h1 {
+div.logo h1 {
   display: inline-block;
   font-size: 16px;
   color: #555;
   font-weight: bold;
 }
 
-nav>div img {
+div.logo img {
   vertical-align: middle;
+}
+
+div.logo button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  line-height: var(--heightNavbar);
+  height: var(--heightNavbar);
+  background-color: transparent;
+  border: none;
+}
+
+.fa-bars {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.fa-arrow-up {
+  display: none;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
 }
 
 .nav {
   position: fixed;
   left: 0;
-  bottom: calc(100vh - var(--heightNavbar));
+  top: var(--heightNavbar);
+  transform: translateY(-100%);
   width: 100%;
   padding-top: var(--heightNavbar);
-  box-shadow: 0px 1px 10px black;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: .5s;
 }
 
-nav ul {
+.nav ul {
   text-align: center;
-  /* border-bottom: 2px solid black; */
   list-style: none;
   background-color: white;
 }
 
-nav ul li a {
+.nav a {
   display: block;
   text-decoration: none;
   font-size: 26px;
@@ -66,16 +96,24 @@ nav ul li a {
   color: #000;
 }
 
+.fa-arrow-up.active {
+  display: block;
+}
+
 .nav.active {
-  bottom: auto;
   top: 0;
+  transform: translateY(0);
+}
+
+.fa-bars.active {
+  display: none;
 }
 
 
 
 /* HEADER */
 
-header {
+.header {
   padding-top: var(--heightNavbar);
   text-align: center;
   color: #fff;
@@ -84,18 +122,19 @@ header {
   background-position: 50% 0;
 }
 
-header>h1 {
+.header h1 {
   font-size: 54px;
   /* line-height: 44px; */
   padding: 50px 10px;
 }
 
-header>p {
+.header p {
   font-family: 'Roboto Slab';
   font-weight: normal;
+  padding: 0 10px;
 }
 
-header>button {
+.header button {
   margin: 50px 0;
   height: 50px;
   width: 160px;
@@ -108,7 +147,7 @@ header>button {
   text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+/* @media (min-width: 480px) {
   html {
     --heightNavbar: 60px;
   }
@@ -136,18 +175,19 @@ header>button {
     border-radius: 35px;
     font-size: 18px;
   }
-}
+} */
 
 
 
 /* padding h1 TITTLE */
 
 .tittle {
-  padding: 30px 0 0px 0;
+  text-align: center;
+  padding: 30px 10px 0 10px;
 }
 
 .tittle+p {
-  margin: 5px 0 40px 0;
+  margin: 5px 10px 40px;
   color: #777;
   /* bottom 90, top 20 na desktop */
 }
@@ -166,19 +206,19 @@ header>button {
   color: #777777;
 }
 
-.serviceswrap>div {
+.serviceswrap div {
   padding: 30px 0;
   border-bottom: 2px solid black;
 }
 
-.serviceswrap>div>h2 {
+.serviceswrap h2 {
   margin: 15px 0;
   font-size: 26px;
   color: black;
 }
 
 
-.serviceswrap>div:nth-last-child(1) {
+.serviceswrap div:nth-last-child(1) {
   border: none;
 }
 
@@ -192,7 +232,8 @@ header>button {
   background-size: cover;
 }
 
-.relax .title {
+.relax .tittle {
+  text-align: left;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -217,14 +258,15 @@ header>button {
   color: #cccccc;
 }
 
-.relax ul li {
+.relax li {
   list-style: none;
   /* list-style-image: url('liStyle.png'); */
   /* vertical-align: middle; */
-  background-image: url('liStyle.png');
+  background-image: url('img/liStyle.png');
   background-repeat: no-repeat;
   background-position: 0 center;
-  padding: 20px 0 20px 44px;
+  padding: 20px 10px 20px 44px;
+  margin-left: 10px;
 }
 
 .relax button {
@@ -256,10 +298,10 @@ header>button {
   list-style: none;
 }
 
-.project ul li {
+.project li {
   position: relative;
   padding-left: 70px;
-  margin: 30px 0 30px 10px;
+  margin: 30px 10px 30px 0px;
 }
 
 .iconProject {
@@ -307,7 +349,7 @@ header>button {
   color: #000;
 }
 
-.project a>.fa-arrow-right {
+.project .fa-arrow-right {
   font-size: 16px;
 }
 
@@ -337,7 +379,7 @@ header>button {
   margin: 0 10px 26px;
 }
 
-.clients>article>.portrait_richardson {
+.clients .portrait_richardson {
   float: left;
   height: 100px;
   width: 100px;
@@ -345,7 +387,7 @@ header>button {
   background-color: rgb(243, 243, 243);
 }
 
-.clients>article>.portrait_thompson {
+.clients .portrait_thompson {
   float: right;
   height: 100px;
   width: 100px;
@@ -354,7 +396,7 @@ header>button {
 
 }
 
-.clients>article>.cite_richardson {
+.clients .cite_richardson {
   position: relative;
   min-height: 80px;
   float: right;
@@ -363,7 +405,7 @@ header>button {
   background-color: rgb(243, 243, 243);
 }
 
-.clients>article>.cite_thompson {
+.clients .cite_thompson {
   position: relative;
   min-height: 80px;
   float: left;
@@ -462,6 +504,7 @@ cite::before {
 }
 
 .info h1 {
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -470,7 +513,7 @@ cite::before {
   list-style-type: none;
 }
 
-.info ul li {
+.info li {
   line-height: 24px;
   padding: 10px 10px 10px 36px;
   /* margin-top: 10px; */
@@ -482,49 +525,49 @@ cite::before {
   white-space: pre-wrap;
 }
 
-.contact ul li:nth-child(1) {
+.contact li:nth-child(1) {
   background-image: url("img/location.png");
   background-repeat: no-repeat;
   background-position: 0 15px;
 }
 
-.contact ul li:nth-child(2) {
+.contact li:nth-child(2) {
   background-image: url("img/iconphone.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.contact ul li:nth-child(3) {
+.contact li:nth-child(3) {
   background-image: url("img/e-mail.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.posts ul li:nth-child(1) {
+.posts li:nth-child(1) {
   background-image: url("img/post.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.posts ul li:nth-child(2) {
+.posts li:nth-child(2) {
   background-image: url("img/photo.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.posts ul li:nth-child(3) {
+.posts li:nth-child(3) {
   background-image: url("img/post.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.posts ul li:nth-child(4) {
+.posts li:nth-child(4) {
   background-image: url("img/post.png");
   background-repeat: no-repeat;
   background-position: 0 center;
 }
 
-.posts ul li:nth-child(5) {
+.posts li:nth-child(5) {
   background-image: url("img/media.png");
   background-repeat: no-repeat;
   background-position: 4px center;
@@ -535,13 +578,13 @@ cite::before {
   white-space: pre-wrap;
 }
 
-.tweets ul li:nth-child(1) {
+.tweets li:nth-child(1) {
   background-image: url("img/twitter.png");
   background-repeat: no-repeat;
   background-position: 0 15px;
 }
 
-.tweets ul li:nth-child(2) {
+.tweets li:nth-child(2) {
   background-image: url("img/twitter.png");
   background-repeat: no-repeat;
   background-position: 0 15px;
@@ -556,49 +599,49 @@ cite::before {
   text-align: center;
 }
 
-.footer ul li {
+.footer li {
   display: inline-block;
   width: 45px;
   height: 45px;
 }
 
-.footer ul li:nth-child(1) {
+.footer li:nth-child(1) {
   background-image: url("img/footertwitter.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(1):hover {
+.footer li:nth-child(1):hover {
   background-image: url("img/footertwitterhover.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(2) {
+.footer li:nth-child(2) {
   background-image: url("img/footerfacebook.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(3) {
+.footer li:nth-child(3) {
   background-image: url("img/footerprinterest.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(3):hover {
+.footer li:nth-child(3):hover {
   background-image: url("img/footerprinteresthover.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(4) {
+.footer li:nth-child(4) {
   background-image: url("img/footergoogle.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer ul li:nth-child(4):hover {
+.footer li:nth-child(4):hover {
   background-image: url("img/footergooglehover.png");
   background-repeat: no-repeat;
   background-position: center;
